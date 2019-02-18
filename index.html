@@ -1,1 +1,220 @@
-echo "Hello World"
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1"/>
+    <title>购买保险</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/page/carapp.css">
+    <link rel="stylesheet" href="plugin/actionSheet/action_sheet.css">
+    <link rel="stylesheet" href="css/page/insurance.css">
+    <link rel="stylesheet" href="plugin/picture/picture.css">
+    <link rel="stylesheet" href="plugin/messager/ka1che.messsager.css">
+</head>
+<body >
+<header>
+    <div class="container  fixed-top gradient header">
+        <div class="header-left">
+            <a href="#"><span class="arrow arrow-left header-arrow"></span></a>
+        </div>
+        <div class="header-center"><span class="header-subject">购买保险</span></div>
+    </div>
+</header>
+<section class="section">
+  <form id="action-form-id" enctype="multipart/form-data" method="post">
+      <div class="weui-gallery" id="gallery">
+          <span class="weui-gallery__img" id="galleryImg"></span>
+          <div class="weui-gallery__opr">
+              <a href="javascript:" class="weui-gallery__del">
+                  <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+              </a>
+          </div>
+      </div>
+    <div class="insurance_item ins_padding">
+        <div class="insurance_marker_title_mar">
+            <div class="insurance_marker_title">
+                陕A59393
+            </div>
+        </div>
+        <div class="insurance_marker_background division_height"></div>
+    </div>
+     <div class="insurance_tips ins_tips_o">
+      <span></span> 购买保险类别
+  </div>
+      <div class="insurance_item insurance_marker font_16_3">
+          <div class="insurance_show border-bottom_hr">
+              <label>机动车损失保险
+                  <input name="account-way" type="checkbox" value="" checked="">
+                  <span></span>
+              </label>
+          </div>
+          <div class="select-area border-bottom_hr ins_box" data-bind-id="#type-confirm_id">
+              <span class="ins_letter-spacing">机动车第三者责任险</span>
+              <div class="">
+                  <input name="sex"   type="text" class="ins_select"
+                         placeholder="150万" value="150万" readonly/>
+                  <i class="arrow arrow-down ins_down_arrow"></i>
+              </div>
+          </div>
+          <div class="select-area border-bottom_hr ins_box" data-bind-id="#siji-type-confirm_id">
+              <span class="ins_letter-spacing">机动车车上人员责任保险(司机)</span>
+              <div class="">
+                  <input name="sex"   type="text" class="ins_select"
+                         placeholder="150万"  value="150万"  readonly/>
+                  <i class="arrow arrow-down ins_down_arrow"></i>
+              </div>
+          </div>
+          <div class="select-area border-bottom_hr ins_box" data-bind-id="#passeg-type-confirm_id">
+              <span class="ins_letter-spacing">机动车车上人员责任保险(乘客)</span>
+              <div class="">
+                  <input name="sex"   type="text" class="ins_select"
+                         placeholder="150万"  value="150万"  readonly/>
+                  <i class="arrow arrow-down ins_down_arrow"></i>
+              </div>
+          </div>
+          <div class="insurance_show border-bottom_hr">
+              <label>车身划痕损失险
+                  <input name="account-way" type="checkbox" value="" >
+                  <span></span>
+              </label>
+          </div>
+          <div class="insurance_show border-bottom_hr">
+              <label>自然损失险
+                  <input name="account-way" type="checkbox" value="" >
+                  <span></span>
+              </label>
+          </div>
+          <div class="insurance_show border-bottom_hr">
+              <label>发动机涉水损失险
+                  <input name="account-way" type="checkbox" value="" >
+                  <span></span>
+              </label>
+          </div>
+          <div class="insurance_show border-bottom_hr">
+              <label class="ins_letter-spacing">机动车损失保险无法找到第三方特约险
+                  <input name="account-way" type="checkbox" value="" >
+                  <span></span>
+              </label>
+          </div>
+          <div class="insurance_show ">
+              <label>车上货物险(大车)
+                  <input name="account-way" type="checkbox" value="" >
+                  <span></span>
+              </label>
+              <i class="ins_remark">该保险每次赔偿均实行20%的绝对免赔率.</i>
+          </div>
+      </div>
+      <div class="insurance_tips ins_tips_o">
+          <span></span> 车辆资料
+      </div>
+      <div class="insurance_item  font_16_6">
+         <div class="input_tab border-bottom_hr">
+             <label>身份证号</label>
+             <input class="" name="card_id" type="text"  title="" placeholder="请输入身份证号" >
+         </div>
+          <div class="input_tab border-bottom_hr">
+              <label>发动机号</label>
+              <input class="" name="card_id" type="text"  title="" placeholder="请输入发动机号" >
+          </div>
+          <div class="input_tab border-bottom_hr">
+              <label>车架号</label>
+              <input class="" name="card_id" type="text"  title="" placeholder="请输入车架号" >
+          </div>
+          <div class="ins_phone">
+              <div >身份证和车辆行驶证</div>
+              <div>
+                  <div class="display_inline ins_photo_width">
+                      <div class="weui-uploader weui-uploader-reset">
+                          <div class="weui-uploader__bd etc_margin-top_pictuer">
+                              <ul class="weui-uploader__files">
+                              </ul>
+                              <div class="weui-uploader__input-box ">
+                                  <input id="registrationPictureA" name="registrationPictureA" class="weui-uploader__input" accept="image/*" type="file" required="">
+                                  <i><img src="img/etc/zhengmian.png" style="width: 100%;height: 100%"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <span>请上传身份证正面</span>
+                  </div>
+                  <div class="display_inline etc_picture_width">
+                      <div class="weui-uploader weui-uploader-reset ">
+                          <div class="weui-uploader__bd etc_margin-top_pictuer">
+                              <ul class="weui-uploader__files">
+                              </ul>
+                              <div class="weui-uploader__input-box ">
+                                  <input id="roadPermissionPicture" name="roadPermissionPicture" class="weui-uploader__input"   type="file" required="">
+                                  <i><img src="img/etc/xukezheng.png" style="width: 100%;height: 100%"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <span>运输许可证正面</span>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </form>
+    <div class="oper-btn insurance_margin">
+        <a class="insurance_btn" href="#" id="get_price">获取报价</a>
+    </div>
+</section>
+
+<footer class="unntie-bank-confirm " id="type-confirm_id">
+    <div class="operation-mask"></div>
+    <div class="operation-actionsheet  operation-actionsheet_toggle" >
+      <!--  <div class="operation-actionsheet__title">
+            <p class="operation-actionsheet__title-text">请选择性别<span class="supplement-item-canle-id" >取消</span></p>
+        </div>-->
+        <div class="operation-actionsheet__menu">
+            <div class="operation-actionsheet__cell color-primary"  data-id="0">30万
+            </div>
+            <div class="operation-actionsheet__cell color-primary" data-id="1">50万
+            </div>
+            <div class="operation-actionsheet__cell color-primary"  data-id="0">100万
+            </div>
+            <div class="operation-actionsheet__cell color-primary" data-id="1">150万
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="unntie-bank-confirm " id="siji-type-confirm_id">
+    <div class="operation-mask"></div>
+    <div class="operation-actionsheet  operation-actionsheet_toggle" >
+        <!--  <div class="operation-actionsheet__title">
+              <p class="operation-actionsheet__title-text">请选择性别<span class="supplement-item-canle-id" >取消</span></p>
+          </div>-->
+        <div class="operation-actionsheet__menu">
+            <div class="operation-actionsheet__cell color-primary"  data-id="0">30万
+            </div>
+            <div class="operation-actionsheet__cell color-primary" data-id="1">50万
+            </div>
+            <div class="operation-actionsheet__cell color-primary"  data-id="0">100万
+            </div>
+            <div class="operation-actionsheet__cell color-primary" data-id="1">150万
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="unntie-bank-confirm " id="passeg-type-confirm_id">
+    <div class="operation-mask"></div>
+    <div class="operation-actionsheet  operation-actionsheet_toggle" >
+        <!--  <div class="operation-actionsheet__title">
+              <p class="operation-actionsheet__title-text">请选择性别<span class="supplement-item-canle-id" >取消</span></p>
+          </div>-->
+        <div class="operation-actionsheet__menu">
+            <div class="operation-actionsheet__cell color-primary"  data-id="0">30万
+            </div>
+            <div class="operation-actionsheet__cell color-primary" data-id="1">50万
+            </div>
+            <div class="operation-actionsheet__cell color-primary"  data-id="0">100万
+            </div>
+            <div class="operation-actionsheet__cell color-primary" data-id="1">150万
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
